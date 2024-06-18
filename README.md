@@ -38,6 +38,80 @@ This assignment aims to familiarize you with the tools and configurations necess
 
 #Deliverables:
 - Document detailing the setup process with step-by-step instructions and screenshots where necessary.
+
+Developer Environment Setup
+
+Software Installations
+
+Visual Studio 2022 Community (with Python and .NET Core workloads installed)
+GitBash
+GitHub Desktop
+Python 3.10.2
+MySQL 8.0.28
+Visual Studio Configuration
+
+Set Visual Studio as the default editor for Python files.
+Install the following extensions:
+Python
+Live Share
+Remote Development
+GitBash Configuration
+
+Configured GitBash with my user credentials using
+git config --global user.name
+and
+git config --global user.email
+.
+Added the SSH key to GitHub using
+ssh-keygen -t rsa -b 4096 -C "my_email@example.com"
+and
+ssh-add ~/.ssh/id_rsa
+.
+GitHub Configuration
+
+Created a GitHub account and set up a repository for my project.
+Installed the GitHub CLI for Windows (
+choco install gh
+).
+Configured GitHub CLI with my user credentials using
+gh auth login
+.
+Python Environment
+
+Created a virtual environment for my project using
+python -m venv venv
+.
+Activated the virtual environment using
+venv\Scripts\activate.ps1
+(Windows) or
+source venv/bin/activate
+(Linux/macOS).
+Installed the necessary Python packages using
+pip install -r requirements.txt
+.
+MySQL Configuration
+
+Installed MySQL using the MySQL Installer package.
+Created a database for my project using
+CREATE DATABASE my_database
+.
+Imported the database schema using
+mysql -u root -p my_database < schema.sql
+.
+Extensions and Customizations
+
+Visual Studio
+
+Installed the Python Language Server extension for enhanced Python intellisense.
+Enabled Live Share to collaborate with other developers in real time.
+Configured Remote Development to connect to remote servers for debugging and deployment.
+Troubleshooting Steps
+
+Git credential issues: Verify that the SSH key is added to GitHub and the user credentials are correct.
+MySQL connection errors: Ensure that MySQL is running and the database credentials are correct.
+Python module import issues: Verify that the Python packages are installed in the active virtual environment.
+Visual Studio extensions not working: Ensure that the extensions are installed and enabled in the Visual Studio settings.
+
 - A GitHub repository containing a sample project initialized with Git and any necessary configuration files (e.g., .gitignore).
 - A reflection on the challenges faced during setup and strategies employed to overcome them.
 
